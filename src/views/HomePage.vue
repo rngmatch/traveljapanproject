@@ -6,7 +6,7 @@
     <main>
       <img src="@/assets/japan.jpg" alt="Travel in Japan" class="hero-image">
       <h1 class="title">Welcome to Travel Japan</h1>
-      <p class="subtitle">Discover the beauty and culture of Japan with our expert travel guides.</p>
+      <p class="subtitle">Discover the beauty and culture of Japan.</p>
     </main>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: linear-gradient(to right, #99a3b9, #1d1a1d);
+  background: linear-gradient(to bottom right, #5b73d6, #3f339a, #0e094e, #250e52);
 }
 
 .hero-image {

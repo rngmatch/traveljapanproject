@@ -2,12 +2,12 @@
     <div class="attractions">
       <h1>Popular Attractions in Japan</h1>
       <ul>
-        <li>Attraction 1</li>
-        <li>Attraction 2</li>
-        <li>Attraction 3</li>
-        <li>Attraction 4</li>
-        <li>Attraction 5</li>
-        <li>Attraction 6</li>
+        <li>Tokyo Skytree</li>
+        <li>Mount Fuji</li>
+        <li>Akihabara</li>
+        <li>Fushimi Inari shrine</li>
+        <li>Imperial Palace</li>
+        <li>Arashiyama Bamboo Forest</li>
       </ul>
     </div>
   </template>
@@ -26,7 +26,7 @@
     justify-content: center;
     height: 100%;
     padding: 2rem;
-    background-color: #5ad1cf;
+    background-color: #5ad190;
   }
   
   h1 {
