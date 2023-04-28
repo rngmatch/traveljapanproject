@@ -4,6 +4,10 @@ import CitiesPage from '@/views/CitiesPage.vue'
 import AttractionsPage from '@/views/AttractionsPage.vue'
 import AccommodationsPage from '@/views/AccommodationsPage.vue'
 import ReviewsPage from '@/views/ReviewsPage.vue'
+import ProfilePage from '@/views/ProfilePage.vue'
+import ItineraryPage from '@/views/ItineraryPage.vue'
+import FavoritesPage from '@/views/FavoritesPage.vue'
+import LoginPage from '@/views/LoginPage.vue'
 
 const routes = [
   {
@@ -31,7 +35,26 @@ const routes = [
   name: 'ReviewsPage',
   component: ReviewsPage,
 },
-
+{
+  path: '/profile',
+  name: 'ProfilePage',
+  component: ProfilePage,
+},
+{
+  path: '/itinerary',
+  name: 'ItineraryPage',
+  component: ItineraryPage,
+},
+{
+  path: '/favorites',
+  name: 'FavoritesPage',
+  component: FavoritesPage,
+},
+{
+  path: '/login',
+  name: 'LoginPage',
+  component: LoginPage,
+},
 ];
 
 const router = createRouter({
