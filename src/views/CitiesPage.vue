@@ -14,8 +14,8 @@
 
 <script>
 export default {
-  name: "CitiesPage",
-};
+  name: 'CitiesPage',
+}
 </script>
 
 <style lang="postcss" scoped>

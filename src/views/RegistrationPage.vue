@@ -1,46 +1,41 @@
 <template>
-  <form class="login-form" @submit.prevent="logUserIn">
-    <input v-model="username" type="text" placeholder="Username" />
+  <form class="registration-form" @submit.prevent="registerUser">
+    <input v-model="email" type="email" placeholder="Email" />
     <input v-model="password" type="password" placeholder="Password" />
-    <button type="submit" class="bg-green-500 px-4 py-2">Log in</button>
-    <router-link :to="{ name: 'RegistrationPage' }">Registration</router-link>
+    <button type="submit" class="bg-green-500 px-4 py-2">Register</button>
   </form>
 </template>
 
 <script>
 import { ref } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
-
+import { useRouter } from 'vue-router'
 import { useAuth } from '@/composables/useAuth'
-const { login, logout } = useAuth()
-const router = useRouter()
-const route = useRoute()
 
-const username = ref('')
+const { register } = useAuth()
+const router = useRouter()
+
+const email = ref('')
 const password = ref('')
 
-const logUserIn = () => {
-  if (login(username.value, password.value)) {
-    if (route.query?.redirect) {
-      router.push(route.query.redirect)
-    } else {
-      router.push({ name: 'Home' })
-    }
-  } else {
-    logout()
+const registerUser = async () => {
+  try {
+    await register(email.value, password.value)
+    router.push({ name: 'Home' })
+  } catch (error) {
+    console.log(error)
   }
 }
 
 export default {
-  name: 'LoginPage',
+  name: 'RegistrationPage',
   methods: {
-    logUserIn,
+    registerUser,
   },
 }
 </script>
 
 <style lang="postcss" scoped>
-.login-form {
+.registration-form {
   display: flex;
   flex-direction: column;
   align-items: center;

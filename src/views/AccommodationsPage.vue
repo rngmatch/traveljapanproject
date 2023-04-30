@@ -2,11 +2,10 @@
   <div class="accommodations">
     <h1>6 Accommodations to stay at in Japan</h1>
     <ul>
-      
       <li>
         <div class="accommodation">
           <div class="accommodation-image">
-            <img src="" alt="Accommodation Image">
+            <img src="" alt="Accommodation Image" />
           </div>
           <div class="accommodation-info">
             <h2>Accommodation Name1</h2>
@@ -18,7 +17,7 @@
       <li>
         <div class="accommodation">
           <div class="accommodation-image">
-            <img src="" alt="Accommodation Image">
+            <img src="" alt="Accommodation Image" />
           </div>
           <div class="accommodation-info">
             <h2>Accommodation Name2</h2>
@@ -30,7 +29,7 @@
       <li>
         <div class="accommodation">
           <div class="accommodation-image">
-            <img src="" alt="Accommodation Image">
+            <img src="" alt="Accommodation Image" />
           </div>
           <div class="accommodation-info">
             <h2>Accommodation Name3</h2>
@@ -42,7 +41,7 @@
       <li>
         <div class="accommodation">
           <div class="accommodation-image">
-            <img src="" alt="Accommodation Image">
+            <img src="" alt="Accommodation Image" />
           </div>
           <div class="accommodation-info">
             <h2>Accommodation Name4</h2>
@@ -54,7 +53,7 @@
       <li>
         <div class="accommodation">
           <div class="accommodation-image">
-            <img src="" alt="Accommodation Image">
+            <img src="" alt="Accommodation Image" />
           </div>
           <div class="accommodation-info">
             <h2>Accommodation Name5</h2>
@@ -66,7 +65,7 @@
       <li>
         <div class="accommodation">
           <div class="accommodation-image">
-            <img src="" alt="Accommodation Image">
+            <img src="" alt="Accommodation Image" />
           </div>
           <div class="accommodation-info">
             <h2>Accommodation Name6</h2>
@@ -82,8 +81,8 @@
 
 <script>
 export default {
-  name: "AccommodationsPage",
-};
+  name: 'AccommodationsPage',
+}
 </script>
 
 <style lang="postcss" scoped>
@@ -93,7 +92,7 @@ export default {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #617be1; 
+  background-color: #617be1;
 }
 
 h1 {

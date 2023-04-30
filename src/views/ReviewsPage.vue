@@ -23,8 +23,8 @@
 
 <script>
 export default {
-  name: "ReviewsPage",
-};
+  name: 'ReviewsPage',
+}
 </script>
 
 <style lang="postcss" scoped>
