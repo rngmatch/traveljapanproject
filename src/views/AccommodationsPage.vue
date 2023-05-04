@@ -17,12 +17,12 @@
       <li>
         <div class="accommodation">
           <div class="accommodation-image">
-            <img src="" alt="Accommodation Image" />
+            <img src="@/assets/Acc02.jpg" alt="Samurai House" />
           </div>
           <div class="accommodation-info">
-            <h2>Accommodation Name2</h2>
-            <p>Location</p>
-            <p>Price per night</p>
+            <h2>"Samurai House"</h2>
+            <p>Location: Kyoto</p>
+            <p>Price per night: $120 a night</p>
           </div>
         </div>
       </li>
