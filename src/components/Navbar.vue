@@ -9,18 +9,30 @@
       <li><router-link to="/profile">Profile </router-link></li>
       <li><router-link to="/Itinerary">Itinerary</router-link></li>
       <li><router-link to="/favorites">Favorites</router-link></li>
-      <li><router-link to="/login">Login</router-link></li>
+      <li v-if="isAuthenticated">
+        <a href="#" @click.prevent="logout">Logout</a>
+      </li>
+      <li v-else><router-link to="/login">Login</router-link></li>
     </ul>
   </nav>
 </template>
 
 <script>
 import { RouterLink } from 'vue-router'
+import { useAuth } from '@/composables/useAuth'
 
 export default {
   name: 'NavBar',
   components: {
     RouterLink,
+  },
+  setup() {
+    const { isAuthenticated, logout } = useAuth()
+
+    return {
+      isAuthenticated,
+      logout,
+    }
   },
 }
 </script>
