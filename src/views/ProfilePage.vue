@@ -1,14 +1,25 @@
 <template>
-  <div class="profile-page">
+  <div v-if="isAuthenticated" class="profile-page">
     <h1>Your Profile</h1>
     <!-- Add profile update form and/or travel history view here -->
   </div>
+  <div v-else>Please log in to access this page.</div>
 </template>
+
 <script>
+import { useAuth } from '@/composables/useAuth'
+const { isAuthenticated } = useAuth()
+
 export default {
-  name: 'ProfilePage',
+  name: 'ProtectedPage',
+  computed: {
+    isAuthenticated() {
+      return isAuthenticated.value
+    },
+  },
 }
 </script>
+
 <style lang="postcss" scoped>
 .profile-page {
   display: flex;

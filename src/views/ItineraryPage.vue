@@ -1,14 +1,25 @@
 <template>
-  <div class="itinerary-page">
+  <div v-if="isAuthenticated" class="itinerary-page">
     <h1>Your Itinerary</h1>
     <!-- Add itinerary form and/or saved itinerary view here -->
   </div>
+  <div v-else>Please log in to access this page.</div>
 </template>
+
 <script>
+import { useAuth } from '@/composables/useAuth'
+const { isAuthenticated } = useAuth()
+
 export default {
-  name: 'ItineraryPage',
+  name: 'ProtectedPage',
+  computed: {
+    isAuthenticated() {
+      return isAuthenticated.value
+    },
+  },
 }
 </script>
+
 <style lang="postcss" scoped>
 .itinerary-page {
   display: flex;

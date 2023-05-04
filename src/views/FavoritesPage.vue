@@ -1,14 +1,25 @@
 <template>
-  <div class="favorites-page">
+  <div v-if="isAuthenticated" class="favorites-page">
     <h1>Your Favorites</h1>
     <!-- Add favorites form and/or saved favorites view here -->
   </div>
+  <div v-else>Please log in to access this page.</div>
 </template>
+
 <script>
+import { useAuth } from '@/composables/useAuth'
+const { isAuthenticated } = useAuth()
+
 export default {
-  name: 'FavoritesPage',
+  name: 'ProtectedPage',
+  computed: {
+    isAuthenticated() {
+      return isAuthenticated.value
+    },
+  },
 }
 </script>
+
 <style lang="postcss" scoped>
 .favorites-page {
   display: flex;

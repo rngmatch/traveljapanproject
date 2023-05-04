@@ -7,29 +7,35 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { useAuth } from '@/composables/useAuth'
+//import { ref } from 'vue'
+//import { useRouter } from 'vue-router'
+//import { useAuth } from '@/composables/useAuth'
 
-const { register } = useAuth()
-const router = useRouter()
-
-const email = ref('')
-const password = ref('')
-
-const registerUser = async () => {
-  try {
-    await register(email.value, password.value)
-    router.push({ name: 'Home' })
-  } catch (error) {
-    console.log(error)
-  }
-}
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
 
 export default {
-  name: 'RegistrationPage',
+  data() {
+    return {
+      email: '',
+      password: '',
+    }
+  },
   methods: {
-    registerUser,
+    registerUser() {
+      const auth = getAuth()
+      createUserWithEmailAndPassword(auth, this.email, this.password)
+        .then(() => {
+          // User registered successfully
+          this.$router.push({
+            name: 'LoginPage',
+            query: { redirect: '/profile' },
+          })
+        })
+        .catch((error) => {
+          // Handle errors here, e.g. display an error message
+          console.log(error.message)
+        })
+    },
   },
 }
 </script>

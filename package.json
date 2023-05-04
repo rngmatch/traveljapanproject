@@ -11,6 +11,7 @@
     "@rushstack/eslint-patch": "^1.2.0",
     "@vueuse/firebase": "^10.1.0",
     "autoprefixer": "^10.4.14",
+    "axios": "^1.4.0",
     "core-js": "^3.8.3",
     "firebase": "^9.21.0",
     "postcss": "^8.4.23",
