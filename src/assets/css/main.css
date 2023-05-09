@@ -1,3 +1,24 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+/* Define styles for desktop devices */
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Define styles for tablet devices */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+/* Define styles for mobile devices */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}

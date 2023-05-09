@@ -1,21 +1,32 @@
 <template>
-  <div v-if="isAuthenticated" class="profile-page">
+  <div v-if="isAuth" class="profile-page">
     <h1>Your Profile</h1>
-    <!-- Add profile update form and/or travel history view here -->
+    <ProfileUpdateForm />
+    <TravelHistory />
   </div>
   <div v-else>Please log in to access this page.</div>
 </template>
 
 <script>
 import { useAuth } from '@/composables/useAuth'
-const { isAuthenticated } = useAuth()
+import ProfileUpdateForm from '@/components/ProfileUpdateForm'
+import TravelHistory from '@/components/TravelHistory'
+import { computed } from 'vue'
 
 export default {
-  name: 'ProtectedPage',
-  computed: {
-    isAuthenticated() {
+  name: 'ProfilePage',
+  components: {
+    ProfileUpdateForm,
+    TravelHistory,
+  },
+  setup() {
+    const { isAuthenticated } = useAuth()
+
+    const isAuth = computed(() => {
       return isAuthenticated.value
-    },
+    })
+
+    return { isAuth }
   },
 }
 </script>
