@@ -3,19 +3,30 @@
     <h1>Customer Reviews</h1>
     <div class="reviews-container">
       <div class="review">
-        <h2>Review Title</h2>
-        <p>Enter review here.</p>
-        <p class="reviewer-name">- Reviewer Name</p>
+        <h2>Tokyo SkyTree:</h2>
+        <p>
+          "The view from the top of Tokyo SkyTree is simply breathtaking! I
+          highly recommend visiting during sunset to see the city light up."
+        </p>
+        <p class="reviewer-name">- Martin</p>
       </div>
       <div class="review">
-        <h2>Another Review Title</h2>
-        <p>Enter review here.</p>
-        <p class="reviewer-name">- Another Reviewer Name</p>
+        <h2>Fushimi Inari Shrine:</h2>
+        <p>
+          "I loved the peaceful atmosphere at Fushimi Inari Shrine. The
+          thousands of torii gates were so impressive and made for some great
+          photos."
+        </p>
+        <p class="reviewer-name">- Gustavo</p>
       </div>
       <div class="review">
-        <h2>Yet Another Review Title</h2>
-        <p>Enter review here.</p>
-        <p class="reviewer-name">- Yet Another Reviewer Name</p>
+        <h2>RX-0 Unicorn Gundam:</h2>
+        <p>
+          "As a big fan of the Gundam series, seeing the life-size RX-0 Unicorn
+          Gundam up close was a dream come true! The light show at night is also
+          really cool."
+        </p>
+        <p class="reviewer-name">- Tony</p>
       </div>
     </div>
   </div>

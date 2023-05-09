@@ -77,40 +77,69 @@
       <li>
         <div class="cities">
           <div class="cities-image">
-            <img src="" alt="cities Image" />
+            <img src="@/assets/Kyoto.jpg" alt="Kyoto" />
           </div>
           <div class="cities-info">
-            <h2>Accommodation Name4</h2>
-            <p>Location</p>
-            <p>Price per night</p>
+            <h2>Location: Kyoto</h2>
+            <p>
+              Kyoto is a city located in the central part of the island of
+              Honshu in Japan. It has a rich history and was the capital of
+              Japan for more than a thousand years. It is known for its
+              beautiful temples, gardens, and traditional architecture.
+            </p>
+            <p>
+              Some of the must-see attractions in Kyoto include the Fushimi
+              Inari Shrine, Kinkaku-ji (the Golden Pavilion), Kiyomizu-dera
+              Temple, and the Arashiyama Bamboo Grove. Kyoto is also famous for
+              its food, including kaiseki (traditional multi-course meals),
+              tofu, and matcha (powdered green tea).
+            </p>
           </div>
         </div>
       </li>
       <li>
         <div class="cities">
           <div class="cities-image">
-            <img src="" alt="cities Image" />
+            <img src="@/assets/Nara.jpg" alt="Nara" />
           </div>
           <div class="cities-info">
-            <h2>Accommodation Name5</h2>
-            <p>Location</p>
-            <p>Price per night</p>
+            <h2>Location: Nara</h2>
+            <p>
+              Nara is famous for its stunning temples, shrines, and gardens.
+              It's also home to the famous Todai-ji Temple, which houses a
+              massive bronze Buddha statue.
+            </p>
+            <p>
+              Visitors can also explore Nara Park, which is home to hundreds of
+              wild deer that roam freely throughout the area. The park is a
+              great place to relax, take a picnic, and enjoy the natural beauty
+              of Japan.
+            </p>
           </div>
         </div>
       </li>
       <li>
         <div class="cities">
           <div class="cities-image">
-            <img src="" alt="cities Image" />
+            <img src="@/assets/Yokohama.jpg" alt="Yokohama" />
           </div>
           <div class="cities-info">
-            <h2>Accommodation Name6</h2>
-            <p>Location</p>
-            <p>Price per night</p>
+            <h2>Location: Yokohama</h2>
+            <p>
+              Yokohama is Japan's second largest city, located south of Tokyo on
+              the east coast of the island of Honshu. It is a bustling port city
+              with a rich history and many attractions, including the Yokohama
+              Landmark Tower, the Yokohama Chinatown, and the Yamashita Park.
+            </p>
+            <p>
+              Some popular things to do in Yokohama include visiting the
+              Yokohama Museum of Art, exploring the historic district of
+              Motomachi, and taking a stroll along the waterfront at Minato
+              Mirai.
+            </p>
           </div>
         </div>
       </li>
-      <!-- Repeat the above code block for each accommodation -->
     </ul>
   </div>
 </template>
