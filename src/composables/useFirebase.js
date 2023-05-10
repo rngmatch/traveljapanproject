@@ -1,12 +1,8 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app'
-//import { getAuth } from "firebase/auth";
-//import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+//import { getDatabase, ref } from 'firebase/database'
+//import { getFirestore, collection, onSnapshot } from 'firebase/firestore'
+//import { ref } from 'vue'
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: 'AIzaSyDtwpYOw3HYY2rBUtnk3-AvI-u-xakk9RQ',
   authDomain: 'traveljapan-4d0e3.firebaseapp.com',
@@ -16,9 +12,41 @@ const firebaseConfig = {
   appId: '1:394759197882:web:827ea08c8d0a671cc29e83',
   measurementId: 'G-Q67Y76E4C2',
 }
-
-// Initialize Firebase
-//const app = initializeApp(firebaseConfig);
 export const firebaseApp = initializeApp(firebaseConfig)
-//const auth = getAuth(app);
-//const analytics = getAnalytics(app);
+/*
+
+const app = initializeApp(firebaseConfig)
+//const db = getFirestore(app)
+
+const dbRef = getDatabase(app).ref(
+  'https://traveljapan-4d0e3-default-rtdb.firebaseio.com/'
+)
+
+const useFirestore = (collectionName) => {
+  const documents = ref([])
+
+  const getDocuments = async () => {
+    onSnapshot(collection(db, collectionName), (snapshot) => {
+      documents.value = snapshot.docs.map((doc) => {
+        return { id: doc.id, ...doc.data() }
+      })
+    })
+  }
+
+  return { documents, getDocuments }
+}
+
+const useRealtimeDatabase = () => {
+  const data = ref(null)
+
+  const getData = () => {
+    dbRef.on('value', (snapshot) => {
+      data.value = snapshot.val()
+    })
+  }
+
+  return { data, getData }
+}
+
+export { db, useFirestore, useRealtimeDatabase }
+*/
