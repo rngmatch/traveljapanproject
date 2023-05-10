@@ -1,11 +1,11 @@
 <template>
-  <div v-if="isAuthenticated" class="favorites-page">
+  <div v-if="state.isAuthenticated" class="favorites-page">
     <h1>Your Favorites</h1>
     <form @submit.prevent="saveFavorite">
       <label for="destination">Destination:</label>
-      <input id="destination" v-model="destination" type="text" />
+      <input id="destination" v-model="state.destination" type="text" />
       <label for="notes">Notes:</label>
-      <textarea id="notes" v-model="notes"></textarea>
+      <textarea id="notes" v-model="state.notes"></textarea>
       <button type="submit">Save Favorite</button>
     </form>
     <div v-if="favorites.length > 0">
@@ -21,16 +21,15 @@
   </div>
   <div v-else>Please log in to access this page.</div>
 </template>
+
 <script>
-import { useAuth } from '@/composables/useAuth'
 import { reactive } from 'vue'
 
-const { isAuthenticated } = useAuth()
-
 export default {
-  name: 'ProtectedPage',
+  name: 'FavoritePage',
   setup() {
     const state = reactive({
+      isAuthenticated: true, // set to true for testing purposes
       destination: '',
       notes: '',
     })
@@ -45,17 +44,12 @@ export default {
       { id: 3, destination: 'Tokyo', notes: 'The city that never sleeps' },
     ]
 
-    function saveFavorite() {
-      // Code to save favorite goes here
-      console.log(state.destination, state.notes)
+    function saveFavorite(newFavorite) {
+      newFavorite.id = favorites.length + 1 // assign a new ID to the favorite
+      favorites.push(newFavorite) // add the new favorite to the array
     }
 
     return { state, favorites, saveFavorite }
-  },
-  computed: {
-    isAuthenticated() {
-      return isAuthenticated.value
-    },
   },
 }
 </script>
